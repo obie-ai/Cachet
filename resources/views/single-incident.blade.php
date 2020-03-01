@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('incident-layout.master')
 
 @section('title', array_get($incident->meta, 'seo.title', $incident->name).' | '.$siteTitle)
 
