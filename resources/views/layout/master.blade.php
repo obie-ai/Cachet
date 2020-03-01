@@ -27,21 +27,14 @@
 
     <link href="{{ Request::fullUrl() }}" rel="canonical">
 
-    @if (isset($favicon))
-    <link rel="icon" href="{{ asset("/img/{$favicon}.ico") }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ asset("/img/{$favicon}.png") }}" type="image/png">
-    @else
-    <link rel="icon" href="{{ asset('/img/favicon.ico') }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ asset('/img/favicon.png') }}" type="image/png">
-    @endif
-
-    <link rel="apple-touch-icon" href="{{ asset('/img/apple-touch-icon.png') }}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/img/apple-touch-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/img/apple-touch-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/img/apple-touch-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('/img/apple-touch-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('/img/apple-touch-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('/img/apple-touch-icon-152x152.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/img/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/img/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/img/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ asset('/img/manifest.json') }}">
+<link rel="mask-icon" href="{{ asset('/img/safari-pinned-tab.svg') }}" color="#5959FC">
+<link rel="shortcut icon" href="{{ asset('/img/favicon.ico') }}">
+<meta name="msapplication-config" content="{{ asset('/img/browserconfig.xml') }}">
+<meta name="theme-color" content="#5959FC">
 
     <title>@yield('title', $siteTitle)</title>
 

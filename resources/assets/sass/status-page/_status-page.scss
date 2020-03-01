@@ -31,6 +31,15 @@ body.status-page {
         }
     }
 
+    .banner-image {
+	    width: 50%;
+	    margin: 0 auto;
+    }
+
+    .about-app {
+	    text-align: center;
+    }
+
     p, strong {
         color: $cachet-base-dark;
     }
