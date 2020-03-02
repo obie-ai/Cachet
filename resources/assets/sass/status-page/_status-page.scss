@@ -52,6 +52,10 @@ body.status-page {
         }
     }
 
+    .section-uptime {
+	    margin-top: 50px;
+    }
+
     .help-icon {
         cursor: help;
     }
@@ -237,7 +241,13 @@ body.status-page {
                 .panel-heading {
                     strong {
                         font-size: 1.1em;
-                    }
+                        vertical-align: middle;
+		    }
+
+		    .label.label-default {
+			    background-color: #585aff;
+			    margin-right: 10px;
+		    }
                 }
 
                 .panel-body {
@@ -435,5 +445,10 @@ body.status-page {
     //Display inline the incident update message.
     .incident-update-item > p {
         display: inline-block;
+    }
+
+    abbr[data-original-title], abbr[title] {
+	    cursor: default;
+	    text-decoration: none;
     }
 }

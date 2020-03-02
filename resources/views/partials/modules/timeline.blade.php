@@ -1,4 +1,13 @@
 @if($daysToShow > 0 && $allIncidents)
+<div class="section-uptime">
+	<h1 id="uptime-heading">Uptime</h1>
+	<canvas id="uptime-chart" height="175" width="600"></canvas>
+</div>
+
+<script>
+window.incidents = @json($allIncidents);
+</script>
+
 <div class="section-timeline">
     <h1>{{ trans('cachet.incidents.past') }}</h1>
     @foreach($allIncidents as $date => $incidents)

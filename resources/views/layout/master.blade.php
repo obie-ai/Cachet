@@ -82,4 +82,5 @@
     @yield('bottom-content')
 </body>
 <script src="{{ asset(mix('dist/js/all.js')) }}"></script>
+<script src="{{ asset('/js/uptime.js') }}"></script>
 </html>
