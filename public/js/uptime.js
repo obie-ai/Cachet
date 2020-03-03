@@ -18,7 +18,7 @@ window.onload = function() {
 		total += parseFloat(pct);
 	});
 
-	document.getElementById('uptime-heading').innerText = 'Uptime (' + parseFloat(total / data.length).toFixed(2) + '%)';
+	document.getElementById('uptime-heading').innerText = 'Uptime (' + (Math.floor((total/data.length) * 100) / 100) + '%)';
 
 	labels = labels.reverse();
 	data = data.reverse();
