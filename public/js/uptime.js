@@ -2,14 +2,14 @@ window.onload = function() {
 	var data = [];
 	var labels = [];
 	var total = 0;
-
+	
 	Object.keys(window.incidents).forEach(function(key) {
 		labels.push(key);
 		var totalMins = 1440;
 		var allocatedMins = 1440;
 		var temp = window.incidents[key];
 		temp.forEach(function(obj) {
-			var mins = moment.duration(moment(obj.updated_at).diff(moment(obj.created_at))).asMinutes();
+			var mins = moment.duration(moment(obj.updated_at).diff(moment(obj.occurred_at))).asMinutes();
 			allocatedMins -= mins;
 		});
 		var pct = parseFloat(allocatedMins / totalMins * 100).toFixed(2);
