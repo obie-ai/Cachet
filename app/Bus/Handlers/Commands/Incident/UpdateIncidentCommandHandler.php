@@ -86,6 +86,13 @@ class UpdateIncidentCommandHandler
             }
         }
 
+        // The incident resolved date.
+        if ($resolvedAt = $command->resolved_at) {
+            if ($date = $this->dates->create('Y-m-d H:i', $resolvedAt)) {
+                $incident->fill(['resolved_at' => $date]);
+            }
+        }
+
         // Rather than making lots of updates, just fill and save.
         $incident->save();
 
@@ -162,6 +169,7 @@ class UpdateIncidentCommandHandler
                 'notify'           => $command->notify,
                 'stickied'         => $command->stickied,
                 'occurred_at'      => $command->occurred_at,
+                'resolved_at'      => $command->resolved_at,
                 'component'        => Component::find($command->component_id) ?: null,
                 'component_status' => $command->component_status,
             ],

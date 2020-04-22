@@ -98,6 +98,7 @@ class Incident extends Model implements HasPresenter
         'stickied'      => 'bool',
         'notifications' => 'bool',
         'occurred_at'   => 'datetime',
+        'resolved_at'   => 'datetime',
         'deleted_at'    => 'date',
     ];
 
@@ -116,6 +117,7 @@ class Incident extends Model implements HasPresenter
         'notifications',
         'message',
         'occurred_at',
+        'resolved_at',
         'created_at',
         'updated_at',
     ];

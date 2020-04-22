@@ -132,6 +132,91 @@ class IncidentPresenter extends BasePresenter implements Arrayable
         return $this->dates->make($this->wrappedObject->occurred_at)->toISO8601String();
     }
 
+        /**
+     * Present formatted resolved_at date time.
+     *
+     * @return string
+     */
+    public function resolved_at()
+    {
+        if (isset($this->wrappedObject->resolved_at))
+        {
+            return $this->dates->make($this->wrappedObject->resolved_at)->toDateTimeString();
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * Present diff for humans date time.
+     *
+     * @return string
+     */
+    public function resolved_at_diff()
+    {
+        if (isset($this->wrappedObject->resolved_at))
+        {
+            return $this->dates->make($this->wrappedObject->resolved_at)->diffForHumans();
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * Present formatted date time.
+     *
+     * @return string
+     */
+    public function resolved_at_formatted()
+    {
+        if (isset($this->wrappedObject->resolved_at))
+        {
+            return ucfirst($this->dates->make($this->wrappedObject->resolved_at)->format($this->incidentDateFormat()));
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * Formats the resolved_at time ready to be used by bootstrap-datetimepicker.
+     *
+     * @return string
+     */
+    public function resolved_at_datetimepicker()
+    {
+        if (isset($this->wrappedObject->resolved_at))
+        {
+            return $this->dates->make($this->wrappedObject->resolved_at)->format('Y-m-d H:i');
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * Present formatted date time.
+     *
+     * @return string
+     */
+    public function resolved_at_iso()
+    {
+        if (isset($this->wrappedObject->resolved_at))
+        {
+            return $this->dates->make($this->wrappedObject->resolved_at)->toISO8601String();
+        }
+        else
+        {
+            return null;
+        }
+    }
+
     /**
      * Present diff for humans date time.
      *
@@ -313,6 +398,7 @@ class IncidentPresenter extends BasePresenter implements Arrayable
             'duration'            => $this->duration(),
             'meta'                => $this->meta(),
             'occurred_at'         => $this->occurred_at(),
+            'resolved_at'         => $this->resolved_at(),
             'created_at'          => $this->created_at(),
             'updated_at'          => $this->updated_at(),
         ]);

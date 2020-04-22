@@ -102,6 +102,13 @@ class CreateIncidentCommandHandler
             $data['occurred_at'] = Carbon::now();
         }
 
+        // Resolved time
+        if ($resolvedAt = $command->resolved_at) {
+            if ($date = $this->dates->create('Y-m-d H:i', $resolvedAt)) {
+                $data['resolved_at'] = $date;
+            }
+        }
+
         // Create the incident
         $incident = Incident::create($data);
 

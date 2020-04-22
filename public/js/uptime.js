@@ -9,7 +9,7 @@ window.onload = function() {
 		var allocatedMins = 1440;
 		var temp = window.incidents[key];
 		temp.forEach(function(obj) {
-			var mins = moment.duration(moment(obj.updated_at).diff(moment(obj.occurred_at))).asMinutes();
+			var mins = moment.duration(moment(obj.resolved_at).diff(moment(obj.occurred_at))).asMinutes();
 			allocatedMins -= mins;
 		});
 		var pct = parseFloat(allocatedMins / totalMins * 100).toFixed(2);

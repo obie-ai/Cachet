@@ -53,6 +53,7 @@ return [
         'message'            => 'Message',
         'message-help'       => 'You may also use Markdown.',
         'occurred_at'        => 'When did this incident occur?',
+        'resolved_at'        => 'When was this incident resolved?',
         'notify_subscribers' => 'Notify subscribers?',
         'notify_disabled'    => 'Due to scheduled maintenance, notifications about this incident or its components will be suppressed.',
         'visibility'         => 'Incident Visibility',

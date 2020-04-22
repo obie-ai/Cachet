@@ -120,6 +120,10 @@
                             <label>{{ trans('forms.incidents.occurred_at') }}</label> <small class="text-muted">{{ trans('forms.optional') }}</small>
                             <input type="text" name="occurred_at" class="form-control flatpickr-time" data-date-format="Y-m-d H:i" placeholder="{{ trans('forms.optional') }}">
                         </div>
+                        <div class="form-group">
+                            <label>{{ trans('forms.incidents.resolved_at') }}</label> <small class="text-muted">{{ trans('forms.optional') }}</small>
+                            <input type="text" name="resolved_at" class="form-control flatpickr-time" data-date-format="Y-m-d H:i" placeholder="{{ trans('forms.optional') }}">
+                        </div>
                         @if($notificationsEnabled)
                         <input type="hidden" name="notify" value="0">
                         <div class="checkbox">

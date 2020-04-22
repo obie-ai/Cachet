@@ -127,6 +127,7 @@ class IncidentController extends Controller
                 Binput::get('notify', false),
                 Binput::get('stickied', false),
                 Binput::get('occurred_at'),
+                Binput::get('resolved_at'),
                 null,
                 [],
                 ['seo' => Binput::get('seo', [])]
@@ -258,6 +259,7 @@ class IncidentController extends Controller
                 Binput::get('notify', true),
                 Binput::get('stickied', false),
                 Binput::get('occurred_at'),
+                Binput::get('resolved_at'),
                 null,
                 [],
                 ['seo' => Binput::get('seo', [])]

@@ -77,6 +77,7 @@ class IncidentController extends AbstractApiController
                 (bool) Binput::get('notify', true),
                 (bool) Binput::get('stickied', false),
                 Binput::get('occurred_at'),
+                Binput::get('resolved_at'),
                 Binput::get('template'),
                 Binput::get('vars', []),
                 Binput::get('meta', [])
@@ -109,6 +110,7 @@ class IncidentController extends AbstractApiController
                 (bool) Binput::get('notify', true),
                 (bool) Binput::get('stickied', false),
                 Binput::get('occurred_at'),
+                Binput::get('resolved_at'),
                 Binput::get('template'),
                 Binput::get('vars', [])
             ));

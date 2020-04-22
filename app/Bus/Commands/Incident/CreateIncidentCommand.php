@@ -83,6 +83,13 @@ final class CreateIncidentCommand
     public $occurred_at;
 
     /**
+     * The date at which the incident was resolved.
+     *
+     * @var string|null
+     */
+    public $resolved_at;
+
+    /**
      * A given incident template.
      *
      * @var string|null
@@ -134,13 +141,14 @@ final class CreateIncidentCommand
      * @param bool        $notify
      * @param bool        $stickied
      * @param string|null $occurred_at
+     * @param string|null $resolved_at
      * @param string|null $template
      * @param array       $template_vars
      * @param array       $meta
      *
      * @return void
      */
-    public function __construct($name, $status, $message, $visible, $component_id, $component_status, $notify, $stickied, $occurred_at, $template, array $template_vars = [], array $meta = [])
+    public function __construct($name, $status, $message, $visible, $component_id, $component_status, $notify, $stickied, $occurred_at, $resolved_at, $template, array $template_vars = [], array $meta = [])
     {
         $this->name = $name;
         $this->status = $status;
@@ -151,6 +159,7 @@ final class CreateIncidentCommand
         $this->notify = $notify;
         $this->stickied = $stickied;
         $this->occurred_at = $occurred_at;
+        $this->resolved_at = $resolved_at;
         $this->template = $template;
         $this->template_vars = $template_vars;
         $this->meta = $meta;
