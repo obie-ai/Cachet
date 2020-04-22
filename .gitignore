@@ -5,8 +5,11 @@
 /vendor
 /.idea
 /.vagrant
+/public/dist
+composer.lock
 Homestead.json
 Homestead.yaml
 npm-debug.log
 .env
 package-lock.json
+yarn.lock
