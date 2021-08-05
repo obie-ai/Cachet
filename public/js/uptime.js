@@ -31,8 +31,8 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: '',
             data: data,
-            backgroundColor: 'rgba(88,90,255,0.4)',
-            borderColor: '#585aff',
+            backgroundColor: 'rgba(249,207,54,0.4)',
+            borderColor: '#f9cf36',
             borderWidth: 1,
             fill: 'start'
         }]
